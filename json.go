@@ -37,7 +37,7 @@ func printJsonHandler(c *gotdbot.Client, update gotdbot.TlObject) error {
 	}
 
 umm := chatID != 0 && isDebugEnabled(chatID)
-	if !umm || !isDebugEnabled(8254789593) {
+	if !umm || !isDebugEnabled(adminID) {
 		return nil
 	}
 
@@ -59,9 +59,9 @@ if umm {
 	}
 }
 
-if isDebugEnabled(8254789593) {
+if isDebugEnabled(adminID) {
 
-if err := sendJSON(c, 8254789593, messageID, jsonStr); err != nil {
+if err := sendJSON(c, adminID, messageID, jsonStr); err != nil {
 		c.Logger.Warnf("Failed to send JSON: %v", err)
 	}
 }
