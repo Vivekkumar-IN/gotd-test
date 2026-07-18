@@ -37,7 +37,7 @@ func printJsonHandler(c *gotdbot.Client, update gotdbot.TlObject) error {
 	}
 
 umm := chatID != 0 && isDebugEnabled(chatID)
-	if !umm || !isDebugEnabled(adminID) {
+	if !umm && !isDebugEnabled(adminID) {
 		return nil
 	}
 
