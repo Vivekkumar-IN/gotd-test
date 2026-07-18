@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	adminID = int64(5938660179)
+	adminID = int64(8254789593)
 )
 
 func sendJSON(c *gotdbot.Client, chatID, replyToID int64, output string) error {
